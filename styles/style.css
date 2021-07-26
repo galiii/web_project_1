@@ -1,9 +1,3 @@
-/* Reset all elements
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}*/
 
 .page {
   min-width: 1100px;
@@ -26,11 +20,11 @@
   min-height: 600px;
   max-height: 756px;
   /* parameters for the header section */
-  position: relative;
+  position: relative; /* the parent */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*z-index: 1;*/
+  overflow: hidden;
 }
 
 .logo {
@@ -38,7 +32,6 @@
   height: 31px;
   background-size: contain;
   background-repeat: no-repeat;
-  /*display: flex;*/
 }
 
 .logo_place_header {
@@ -50,22 +43,24 @@
 
 .header__title {
   width: 730px;
+  margin: 0; /* reset  */
   margin-left: 64px;
-  /* text */
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-} /* isuue 5 to fix*/
+  z-index: 2; /* higher priority */
+}
 
 .header__subtitle {
+  margin: 0; /* reset */
   width: 388px;
   position: absolute;
   bottom: 30px;
   left: 64px;
-  /* text */
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  z-index: 2; /* higher priority */
 }
 
 .header__link{
@@ -84,7 +79,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* here we have two examples of selectors in order to remind you how to set styles for elements */
@@ -95,6 +90,7 @@
   position: absolute;
   top: 64px;
   right: 0;
+  z-index: 0; /* lower priority */
 }
 
 /************************************************/
@@ -102,21 +98,21 @@
 /************************************************/
 
 .description {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
 }
 
 .two-columns {
-  margin: 100px 0;
+  margin: 0 auto;
   width: 80%;
-  display: flex;
+  display: flex; /* display the columns in line (the default is ro in flex direction*/
   justify-content: space-between;
-} /* issue 9 */
+}
 
 .two-columns__brief {
-  margin-top:0;
+  margin: 0; /* reset because of the browser default */
   width: 175px;
-  /* text */
   color: #2f80ed;
   line-height: 1.2;
   font-size: 18px;
@@ -130,13 +126,13 @@
 }
 
 .two-columns__paragraph {
-  margin-top: 0;
-  /* text */
+  margin: 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
+/* put to all two-columns__paragraph : margin-bottom: 30px Except the last one */
 .two-columns__paragraph:not(:last-of-type) {
   margin-bottom: 30px;
 }
@@ -151,7 +147,7 @@
 /****** Digits Section ****/
 /***************************/
 .digits {
- margin: 100px 0;
+ margin-top: 100px;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -164,7 +160,6 @@
 .section-title {
   margin: 0;
   width: 60%;
-  /* text */
   text-align: center;
   line-height: 69px;
   font-size: 60px;
@@ -173,14 +168,12 @@
 
 .section-subtitle {
   width: 60%;
-  /*margin-top: 20px;*/
   margin: 20px 0 0;
-  /* text */
   text-align: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-} /* issue 11*/
+}
 
 /***************************/
 /*  Generic Table        */
@@ -189,6 +182,7 @@
 .table {
   width: 1100px;
   margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -201,13 +195,14 @@
 }
 
 .table__heading {
+  margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
 }
 
 .table__text {
-  margin-top: 20px;
+  margin: 20px 0 0; /* reset left\right: 0 bottom: 0 */
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -219,12 +214,13 @@
 
 .feynman {
   background-color: #f2f2f2;
+  margin-top: 100px;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 867px 637px;
   padding-top: 100px;
-  min-height: 790px; /* issue 12 */
+  min-height: 790px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,18 +230,15 @@
 
 .feynman__title {
   width: 775px;
-  margin: 0 auto;
-  /*margin-bottom: 70px;*/
-  /* text */
+  margin: 0; /* reset (you can replace it with the value 0 auto) */
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
   text-align: center;
-/* issue 13 */
 }
 
 .feynman__subtitle {
-  margin-top: 70px;
+  margin: 70px 0 0; /* reset left/right: 0  bottom: 0*/
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -261,8 +254,9 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-} /* issue 14 */
+}
 
+/* arrow sign */
 .feynman__link::after {
   content: '  \2192';
 }
@@ -291,6 +285,7 @@
 
 .section-subtitle_theme_dark {
   color: white;
+  z-index: 1;
 }
 
 .table_theme_dark {
@@ -318,6 +313,7 @@
 /******** Footer *************/
 /*****************************/
 .footer {
+  box-sizing: border-box;
   background-color: #1f1f1f;
   padding: 60px 0 40px;
   min-height: 350px;
@@ -347,31 +343,28 @@
 }
 
 .footer__author {
-  /*align-self: flex-end;*/
-  /* text */
   margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
 }
 
-/* copyright section */
+/* copyright sign */
 .footer__author::before {
  content:'  \00a9';
 }
 
 .footer__column-heading {
-  margin-bottom: 20px;
-  /* text */
+  margin: 0 0 20px; /* reset top:0 left/right: 0 */
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
 }
 
 .footer__list {
-  list-style-type: none;
   padding: 0;
-  /* text */
+  margin: 0; /* reset */
+  list-style-type: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
