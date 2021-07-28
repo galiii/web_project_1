@@ -1,31 +1,40 @@
-
-.page {
-  min-width: 1100px;
-  /* we don't know how to make mobile versions of websites yet, */
-  /* so here we've set a minimum page width */
-  max-width: 1600px;
-  /* here we've set a maximum page width */
-  margin: 0 auto;
-  /* this ensures that all content is centered on screens wider than 1600px */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-/*******************************************/
 /************ Header **********************/
-/*******************************************/
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__title/header__title.css);
+@import url(../blocks/header/__subtitle/header__subtitle.css);
+@import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/header/__main-illustration/header__main-illustration.css);
+@import url(../blocks/header/__square-pic/header__square-pic.css);
 
-.header {
-  background-color: #f2f2f2;
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  /* parameters for the header section */
-  position: relative; /* the parent */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
+/***** Animation ***/
+@import url(../blocks/rotation/rotation.css);
+
+/*** Description **/
+@import url(../blocks/description/descriptions.css);
+
+/** Two-columns **/
+@import url(../blocks/two-columns/two-columns.css);
+@import url(../blocks/two-columns/__brief/two-columns__brief.css);
+@import url(../blocks/two-columns/__main-text/two-columns__main-text.css);
+@import url(../blocks/two-columns/__paragraph/two-columns__paragraph.css);
+@import url(../blocks/two-columns/__span-accent/two-columns__span-accent.css);
+/** Techniques **/
+@import url(../blocks/techniques/techniques.css);
+
+/** Section-title **/
+@import url(../blocks/section-title/section-title.css);
+/** Section-title **/
+@import url(../blocks/section-subtitle/section-subtitle.css);
+
+/** Cards **/
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/cards/__item/cards__item.css);
+@import url(../blocks/cards/__image/cards__image.css);
+@import url(../blocks/cards/__title/cards__title.css);
+@import url(../blocks/cards/__description/cards__description.css);
+
+
 
 .logo {
   width:  154px;
@@ -41,107 +50,6 @@
   left: 64px;
 }
 
-.header__title {
-  width: 730px;
-  margin: 0; /* reset  */
-  margin-left: 64px;
-  line-height: 96px;
-  font-size: 102px;
-  font-weight: bold;
-  z-index: 2; /* higher priority */
-}
-
-.header__subtitle {
-  margin: 0; /* reset */
-  width: 388px;
-  position: absolute;
-  bottom: 30px;
-  left: 64px;
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: normal;
-  z-index: 2; /* higher priority */
-}
-
-.header__link{
-  color: #2f80ed;
-  text-decoration: none;
-}
-
-/* arrow sign */
-.header__link::after {
-  content: '  \2192';
-}
-
-.header__main-illustration {
-  width: 756px;
-  height: 608px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
-
-/* here we have two examples of selectors in order to remind you how to set styles for elements */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-  background-color: #2f80ed;
-  position: absolute;
-  top: 64px;
-  right: 0;
-  z-index: 0; /* lower priority */
-}
-
-/************************************************/
-/****************** Sections *******************/
-/************************************************/
-
-.description {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-}
-
-.two-columns {
-  margin: 0 auto;
-  width: 80%;
-  display: flex; /* display the columns in line (the default is ro in flex direction*/
-  justify-content: space-between;
-}
-
-.two-columns__brief {
-  margin: 0; /* reset because of the browser default */
-  width: 175px;
-  color: #2f80ed;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-.two-columns__main-text {
-  margin-bottom: 0;
-  width: 80%;
-  min-width: 784px;
-}
-
-.two-columns__paragraph {
-  margin: 0;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-}
-
-/* put to all two-columns__paragraph : margin-bottom: 30px Except the last one */
-.two-columns__paragraph:not(:last-of-type) {
-  margin-bottom: 30px;
-}
-
-.two-columns__span-accent {
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: bold;
-}
 
 /***************************/
 /****** Digits Section ****/
@@ -153,27 +61,7 @@
  align-items: center;
 }
 
-/***************************/
-/*  Generic Section       */
-/************************/
 
-.section-title {
-  margin: 0;
-  width: 60%;
-  text-align: center;
-  line-height: 69px;
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.section-subtitle {
-  width: 60%;
-  margin: 20px 0 0;
-  text-align: center;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-}
 
 /***************************/
 /*  Generic Table        */

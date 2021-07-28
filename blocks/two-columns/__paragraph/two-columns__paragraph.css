@@ -1,0 +1,11 @@
+.two-columns__paragraph {
+  margin: 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* put to all two-columns__paragraph : margin-bottom: 30px Except the last one */
+.two-columns__paragraph:not(:last-of-type) {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,12 @@
+.cards {
+  background-color: papayawhip;
+  border: 1px solid black;
+  width: 920px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+  align-content: space-around;
+  list-style-type: none;
+}
