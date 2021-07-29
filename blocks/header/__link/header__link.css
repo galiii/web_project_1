@@ -1,9 +1,14 @@
 .header__link{
   color: #2f80ed;
   text-decoration: none;
+  transition: opicity .2s linear;
 }
 
 /* arrow sign */
 .header__link::after {
   content: '  \2192';
+}
+
+.header__link:hover{
+  opacity: .5;
 }

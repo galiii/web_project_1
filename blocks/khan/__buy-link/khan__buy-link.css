@@ -6,10 +6,15 @@
   line-height: 42px;
   font-size: 30px;
   font-weight: normal;
+  transition: opacity .4s ease-in;
 }
 
 
 /* arrow sign */
 .khan__buy-link::after {
   content: '  \2192';
+}
+
+.khan__buy-link:hover {
+  opacity: .3;
 }

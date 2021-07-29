@@ -7,5 +7,4 @@
   right: 0;
   z-index: 0; /* lower priority */
   transform: rotate(-15deg); /* Rotate  15 degrees counterclockwise */
-  animation: rotation 20s linear infinite;/* full 360° rotation in 20 seconds and move repetitively in a loop.*/
 }

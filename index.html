@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning how to learn</title>
-  <link rel="stylesheet" href="./vendor/normalize.css">
-  <link rel="stylesheet" href="./styles/index.css">
+  <!--link rel="stylesheet" href="./vendor/normalize.css"-->
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body>
   <div class="page">
@@ -18,8 +18,9 @@
         <a href="#" class="header__link">Learn more</a>
       </p>
       <img src="./images/header-image.png" alt="Epic ponderer stood on the mountaintop deliberating over the finer points.." class="header__main-illustration">
-      <div class="header__square-pic"></div>
+      <div class="header__square-pic rotation"></div>
     </header>
+
     <main class="content">
       <section class="description">
         <div class="two-columns">
@@ -90,8 +91,8 @@
         <h2 class="section-title">TED talks</h2>
         <p class="section-subtitle">For lovers of procrastination</p>
         <div class="video__iframes">
-           <iframe src="https://www.youtube.com/embed/5MgBikgcWnY" frameborder="0" class="video__iframe" allowfullscreen></iframe>
-           <iframe src="https://www.youtube.com/embed/arj7oStGLkU" frameborder="0" class="video__iframe" allowfullscreen></iframe>
+           <iframe src="https://www.youtube.com/embed/5MgBikgcWnY"  class="video__iframe" allowfullscreen></iframe>
+           <iframe src="https://www.youtube.com/embed/arj7oStGLkU"  class="video__iframe" allowfullscreen></iframe>
         </div>
       </section><!--end section Video-->
 
@@ -114,7 +115,7 @@
         <h2 class="feynman__title">The Feynman Technique</h2>
         <p class="feynman__subtitle">Learn without forgetting</p>
         <a href="#" class="feynman__link">More</a>
-      </section><!-- end section feynman -->
+      </section><!-- end section Feynman -->
 
       <section class="digits">
         <h2 class="section-title">Facts and figures</h2>
@@ -160,12 +161,12 @@
 
       <section class="khan">
         <div class="khan__container">
-          <h2 class="khan__author">Salman Khan</h2>
-          <h3 class="khan__title">The One World Schoolhouse</h3>
-          <p class="khan__quote">Sal Khan's passion and innovation is transforming learning for millions of
+          <p class="khan__author">Salman Khan</p>
+          <h2 class="khan__title">The One World Schoolhouse</h2>
+          <blockquote class="khan__quote">Sal Khan's passion and innovation is transforming learning for millions of
             students worldwide. The One World Schoolhouse is a must-read for all
             who are committed to improving education so students everywhere can
-            gain the skills and knowledge to be successful in school, careers and life.</p>
+            gain the skills and knowledge to be successful in school, careers and life.</blockquote>
           <p class="khan__quote-author">George Lucas</p>
           <p class="khan__quote-author-subline">Filmmaker</p>
           <div class="khan__book-container">
@@ -220,17 +221,17 @@
             <p class="table__text table__text_theme_dark">Emphasize quantity and speed</p>
           </li>
         </ul><!--end table-->
-        <img src="./images/kaufman-triangle.svg" alt="A big blue triangle, over which Josh Kaufman claims ownership" class="kaufman__triangle">
+        <img src="./images/kaufman-triangle.svg" alt="A big blue triangle, over which Josh Kaufman claims ownership" class="kaufman__triangle rotation">
       </section><!--end section Kaufman-->
 
       <section class="resources">
         <h2 class="section-title">Useful resources</h2>
         <p class="section-subtitle">Further materials on learning techniques and hacks.</p>
         <nav class="resources__logo-zone">
-          <a href="#" target="_blank" class="resources__logo resources__logo_ted"></a>
-          <a href="#" target="_blank" class="resources__logo resources__logo_meduium"></a>
-          <a href="#" target="_blank" class="resources__logo resources__logo_dezeen"></a>
-          <a href="#" target="_blank" class="resources__logo resources__logo_goodreads"></a>
+          <a href="#" target="_blank" class="resources__logo resources__logo_type_ted"></a>
+          <a href="#" target="_blank" class="resources__logo resources__logo_type_meduium"></a>
+          <a href="#" target="_blank" class="resources__logo resources__logo_type_dezeen"></a>
+          <a href="#" target="_blank" class="resources__logo resources__logo_type_goodreads"></a>
         </nav>
       </section>
     </main>

@@ -1,7 +1,10 @@
+/**** Normalize ****/
+@import url(../vendor/normalize.css);
 
+/**** Pages ****/
 @import url(../blocks/page/page.css);
 
-/************ Header **********************/
+/**** Header ****/
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__title/header__title.css);
 @import url(../blocks/header/__subtitle/header__subtitle.css);
@@ -10,7 +13,7 @@
 @import url(../blocks/header/__square-pic/header__square-pic.css);
 
 /***** Animation ***/
-@import url(../blocks/animation/animation.css);
+@import url(../blocks/rotation/rotation.css);
 
 /*** Description **/
 @import url(../blocks/description/descriptions.css);
@@ -86,10 +89,10 @@
 @import url(../blocks/resources/resources.css);
 @import url(../blocks/resources/__logo-zone/resources__logo-zone.css);
 @import url(../blocks/resources/__logo/resources__logo.css);
-@import url(../blocks/resources/__logo/resources__logo_dezeen.css);
-@import url(../blocks/resources/__logo/resources__logo_goodreads.css);
-@import url(../blocks/resources/__logo/resources__logo_meduium.css);
-@import url(../blocks/resources/__logo/resources__logo_ted.css);
+@import url(../blocks/resources/__logo/_type/resources__logo_type_dezeen.css);
+@import url(../blocks/resources/__logo/_type/resources__logo_type_goodreads.css);
+@import url(../blocks/resources/__logo/_type/resources__logo_type_meduium.css);
+@import url(../blocks/resources/__logo/_type/resources__logo_type_ted.css);
 
 /** Footer **/
 @import url(../blocks/footer/footer.css);

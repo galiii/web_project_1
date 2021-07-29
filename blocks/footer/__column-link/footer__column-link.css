@@ -2,4 +2,9 @@
   display: block;
   text-decoration: none;
   color: white;
+  transition: opicity .3s ease-in-out;
+}
+
+.footer__column-link:hover {
+  opacity: .6;
 }
