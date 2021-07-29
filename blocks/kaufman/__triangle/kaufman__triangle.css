@@ -1,0 +1,8 @@
+.kaufman__triangle {
+  width: 660px;
+  height: 636px;
+  position: absolute;
+  right: -124px;
+  top: 0;
+  animation: rotation 20s linear infinite;/* full 360° rotation in 20 seconds and move repetitively in a loop.*/
+}
