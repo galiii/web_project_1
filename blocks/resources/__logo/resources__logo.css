@@ -5,3 +5,8 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.resources__logo:hover {
+  cursor: pointer;
+  opacity: .3;
+}
